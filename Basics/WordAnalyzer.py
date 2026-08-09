@@ -80,7 +80,7 @@ def WordAnalyzer():
             print(f"Total characters: {characterCounter(str)}")
             print(f"Total words: {wordCounter(str)}")
             print(f"Total vowels: {vowelCounter(str)}")
-            print(f"Total consonants: {consonantCounter(str)}") # galat hai - sub le raha hai
+            print(f"Total consonants: {consonantCounter(str)}")
             print(f"Longest word: {LongestWord(str)}")
             print(f"Number of digits: {digitCounter(str)}")
             print(f"Number of special characters: {specialCharacterCounter(str)}")
