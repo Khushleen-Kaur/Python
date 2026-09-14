@@ -1,0 +1,5 @@
+food ,100
+movie,800
+earphones,200
+Books,500
+clothes,2000
