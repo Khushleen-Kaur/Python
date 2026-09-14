@@ -1,5 +1,5 @@
-from Python.Intermediate.calculator_project.calculator import arithmetic as bas
-from Python.Intermediate.calculator_project.calculator import advance as adv
+from calculator import arithmetic as bas
+from calculator import advance as adv
 
 print("\nYour pocket calculator, powered by Python.")
 def main():
