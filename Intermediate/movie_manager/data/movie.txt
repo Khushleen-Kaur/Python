@@ -1,0 +1,19 @@
+The Dark Knight||Action||2008||Watched||10
+Avengers: Endgame||Action||2019||Watched||9
+Dangal||Drama||2016||Watched||9
+Zindagi Na Milegi Dobara||Drama||2011||Watched||10
+Jab We Met||Romance||2007||Watched||9
+Taare Zameen Par||Drama||2007||Watched||10
+Chhichhore||Comedy||2019||Watched||9
+Drishyam||Thriller||2015||Watched||9
+Andhadhun||Thriller||2018||Not Watched||0
+The Prestige||Mystery||2006||Not Watched||0
+Shutter Island||Thriller||2010||Not Watched||0
+Parasite||Thriller||2019||Watched||9
+The Matrix||Sci-Fi||1999||Watched||9
+The Martian||Sci-Fi||2015||Not Watched||0
+Interstellar||Sci-Fi||2014||Watched||10
+Whiplash||Drama||2014||Watched||9
+The Shawshank Redemption||Drama||1994||Not Watched||0
+Forrest Gump||Drama||1994||Watched||10
+Barfi!||Romance||2012||Watched||9
