@@ -54,22 +54,22 @@ def main():
             choice = int(input("Enter a choice: "))
         except ValueError:
             print("Please enter a valid choice")
+        else:
+            if( choice == 5 ):
+                print("----- Exiting -----")
+                break
 
-        if( choice == 5 ):
-            print("----- Exiting -----")
-            break
-
-        match (choice):
-            case 1:
-                divide()
-            case 2:
-                read_file()
-            case 3:
-                access_list()
-            case 4:
-                word_meaning()
-            case _:
-                print("Please Enter a valid choice")
+            match (choice):
+                case 1:
+                    divide()
+                case 2:
+                    read_file()
+                case 3:
+                    access_list()
+                case 4:
+                    word_meaning()
+                case _:
+                    print("Please Enter a valid choice")
 
 
 if __name__ == "__main__":

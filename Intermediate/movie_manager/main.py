@@ -21,8 +21,12 @@ def main():
         print("7. Movie statistics")
         print("8. Get Recommendation")
         print("9. Exit")
-
-        choice = int(input("Enter choice: "))
+        try:
+            choice = int(input("Enter choice: "))
+        except ValueError:
+            print("Please, enter a valid number.")
+            continue
+        
         if choice == 9:
             print("[#ade8f4 bold]======= Exiting =======[/#ade8f4 bold]")
             break

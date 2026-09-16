@@ -10,13 +10,20 @@ def add_movie():
     print("[#9fc5e8 bold]\n--------- Add Movie Details ---------[/#9fc5e8 bold]")
     name = input("Enter movie name: ")
     genre = input("Enter genre: ")
-    yr = input("Enter release year: ")
-    status = input("Enter status (Watched/Unwatched): ")
-    rating = input("Enter rating: ")
+    try:
+        yr = input("Enter release year: ")
+        yr = int(yr)
+        if yr <= 0 or yr > 3000:
+            raise ValueError("Please, enter a valid year.")
+    except ValueError as e:
+        print(e)
+    else:    
+        status = input("Enter status (Watched/Unwatched): ")
+        rating = input("Enter rating: ")
 
-    storage.save_moive(f"\n{name}||{genre}||{yr}||{status}||{rating}")
+        storage.save_moive(f"\n{name}||{genre}||{yr}||{status}||{rating}")
 
-    print("Movie Added Successfully!")
+        print("Movie Added Successfully!")
 
 def view_all():
     print("[#9fc5e8 bold]\n------------ Movie List ------------[/#9fc5e8 bold]")
@@ -72,11 +79,13 @@ def mark_watched():
 def rate_movie():
     print("[#9fc5e8 bold]\n---------- Rate Movie ----------[/#9fc5e8 bold]")
     name = input("Enter movie name: ")
-    rate = input("Enter movie rating: ")
-    storage.update_rate(name, rate)
-    analyzer.rate_analyzer(int(rate))
-    print("Rating Modified!")
-
+    try:
+        rate = input("Enter movie rating: ")
+        storage.update_rate(name, rate)
+        analyzer.rate_analyzer(int(rate))
+        print("Rating Modified!")
+    except:
+        print("Please, Enter Valid Rating!")
 
 
 
