@@ -36,7 +36,7 @@ def add_staff():
     try:
         role = int(input("Enter prefered role: "))
         s = p.Staff(name, phone, STAFF_ROLES[role])
-        print(f"Staff - {STAFF_ROLES[role]} Enrolled successfully.")
+        print(f"Staff - {STAFF_ROLES[role-1]} Enrolled successfully.")
         print(f"Staff ID: {s.staff_id}")
     except ValueError:
         print("Please, enter a valid number.")
