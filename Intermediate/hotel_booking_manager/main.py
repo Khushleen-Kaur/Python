@@ -2,8 +2,9 @@
 import room as Room
 import person_methods as pm
 import booking_methods as bm
+import hotel_analysis as ha
 
-def main():
+def menu():
     while(True):
         print("\n======= Hotel Manager ========")
         print("1. View Rooms")
@@ -16,14 +17,16 @@ def main():
         print("8. Checkout")
         print("9. Add Staff")
         print("10. View Staff")
-        print("11. Exit")
+        print("11. Hotel Analysis")
+        print("12. Exit")
 
         try:
             choice = int(input("Enter choice: "))
         except ValueError:
             print("Please, enter a  valid choice!")
         else:
-            if choice == 11:
+            if choice == 12:
+                print("Exiting...")
                 break
 
             match choice:
@@ -47,9 +50,11 @@ def main():
                     pm.add_staff()
                 case 10:
                     pm.view_staff()
+                case 11:
+                    ha.show_analysis()
                 case _:
                     print("Please, Enter a valid choice.")
 
 
 if __name__ == "__main__":
-    main()
+    menu()
