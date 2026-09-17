@@ -1,40 +1,52 @@
 
 import room as Room
-import person as Person
-import booking as Book
+import person_methods as pm
+import booking_methods as bm
 
 def main():
     while(True):
         print("\n======= Hotel Manager ========")
         print("1. View Rooms")
-        print("2. Add Guest")
-        print("3. Book Room")
-        print("4. Cancel Booking")
+        print("2. View Guests")
+        print("3. Add Guest")
+        print("4. Book Room")
         print("5. View Bookings")
-        print("6. Checkout")
-        print("7. Exit")
+        print("6. Extend stay")
+        print("7. Cancel Booking")
+        print("8. Checkout")
+        print("9. Add Staff")
+        print("10. View Staff")
+        print("11. Exit")
 
         try:
             choice = int(input("Enter choice: "))
         except ValueError:
             print("Please, enter a  valid choice!")
         else:
-            if choice == 7:
+            if choice == 11:
                 break
 
             match choice:
                 case 1:
                     Room.room_details()
                 case 2:
-                    Person.add_guest()
+                    pm.view_guests()
                 case 3:
-                    Book.book_room()
+                    pm.add_guest()
                 case 4:
-                    Book.cancel_booking()
+                    bm.book_room()
                 case 5:
-                    Book.display_booking()
+                    bm.display_booking()
                 case 6:
-                    Book.checkout()
+                    bm.extend_booking()
+                case 7:
+                    bm.cancel_booking()
+                case 8:
+                    bm.checkout()
+                case 9:
+                    pm.add_staff()
+                case 10:
+                    pm.view_staff()
                 case _:
                     print("Please, Enter a valid choice.")
 
