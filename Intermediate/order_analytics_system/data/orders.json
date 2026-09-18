@@ -3,7 +3,7 @@
     "order_id": 1001,
     "customer": "Khush",
     "order_date": "2026-01-08",
-    "status": "Completed",
+    "status": "Pending",
     "items": [
       {"product": "Wireless Mouse", "category": "Electronics", "price": 750, "quantity": 1},
       {"product": "Notebook", "category": "Stationery", "price": 150, "quantity": 2}
@@ -23,7 +23,7 @@
     "order_id": 1035,
     "customer": "Vikram",
     "order_date": "2026-09-15",
-    "status": "Completed",
+    "status": "Cancelled",
     "items": [
       {"product": "Monitor", "category": "Electronics", "price": 12999, "quantity": 1},
       {"product": "USB-C Cable", "category": "Electronics", "price": 399, "quantity": 2}

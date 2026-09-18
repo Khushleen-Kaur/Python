@@ -1,6 +1,6 @@
 import json
 
-order_data = []
+order_data = {}
 
 def read_data(file_name = "data/orders.json"):
     try:
@@ -18,16 +18,21 @@ def get_total():
         for item in person["items"]:
             total += item["price"]
             count += 1
-        order_data.append({
-            "order_id" : person["order_id"],
-            "total_spending" : total,
+        order_data[person["order_id"]] = {
+            "total_amount" : total,
             "total_items" : count
-        })
+        }
+
+# def total_by_order_id(id):
+#     total = order_data[id]['total_amount']
+#     items = order_data[id]['total_items']
+#     return total, items
+
+class Choice:
+    def __enter__(self):
+        choice = int(input("Enter choice: "))
+        return choice
+    def __exit__(self, exc_type, exc, tb):
+        pass
+
 get_total()
-
-def total_by_order_id(id):
-    for orders in order_data:
-        if orders['order_id'] == id:
-            return orders['total_spending'], orders['total_items']
-
-# print(order_data)
