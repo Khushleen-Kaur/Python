@@ -1,0 +1,54 @@
+[
+  {
+    "order_id": 1001,
+    "customer": "Khush",
+    "order_date": "2026-01-08",
+    "status": "Completed",
+    "items": [
+      {"product": "Wireless Mouse", "category": "Electronics", "price": 750, "quantity": 1},
+      {"product": "Notebook", "category": "Stationery", "price": 150, "quantity": 2}
+    ]
+  },
+  {
+    "order_id": 1002,
+    "customer": "Gopi",
+    "order_date": "2026-01-15",
+    "status": "Completed",
+    "items": [
+      {"product": "Mechanical Keyboard", "category": "Electronics", "price": 3499, "quantity": 1},
+      {"product": "Mouse Pad", "category": "Accessories", "price": 499, "quantity": 1}
+    ]
+  },
+  {
+    "order_id": 1035,
+    "customer": "Vikram",
+    "order_date": "2026-09-15",
+    "status": "Completed",
+    "items": [
+      {"product": "Monitor", "category": "Electronics", "price": 12999, "quantity": 1},
+      {"product": "USB-C Cable", "category": "Electronics", "price": 399, "quantity": 2}
+    ]
+  },
+  {
+    "order_id": 1037,
+    "customer": "Khush",
+    "order_date": "2026-09-17",
+    "status": "Completed",
+    "items": [
+      {"product": "Laptop Stand", "category": "Accessories", "price": 1899, "quantity": 1},
+      {"product": "Wireless Mouse", "category": "Electronics", "price": 799, "quantity": 1},
+      {"product": "Notebook", "category": "Stationery", "price": 149, "quantity": 2}
+    ]
+  },
+  {
+    "order_id": 1040,
+    "customer": "Aditi",
+    "order_date": "2026-09-18",
+    "status": "Completed",
+    "items": [
+      {"product": "Handbag", "category": "Fashion", "price": 2199, "quantity": 1},
+      {"product": "Sunglasses", "category": "Fashion", "price": 999, "quantity": 1},
+      {"product": "Perfume", "category": "Beauty", "price": 1899, "quantity": 1}
+    ]
+  }
+]
