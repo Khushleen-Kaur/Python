@@ -1,6 +1,6 @@
 # from rich import print
 import helper
-
+# search by customer_name, order_id 
 def completed_orders():
     data = helper.read_data()
     print("\nList of Completed Orders:")
