@@ -1,15 +1,14 @@
 # from rich import print
 import helper
 # search by customer_name, order_id 
+
 def completed_orders():
     data = helper.read_data()
     print("\nList of Completed Orders:")
     print(f"{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}")
     print("-" * 50)
-    count = 0
     for person in data:
         if person["status"] == "Completed":
-            count += 1
             print(
                 f"{person['order_id']:<10}"
                 f"{person['customer']:<15}"
@@ -17,41 +16,37 @@ def completed_orders():
                 f"{person['order_date']:<15}"
             )
 
-    print(f"Total completed orders: {count}")
+    print(f"Total completed orders: {helper.count_order()[0]}")
 
 def cancelled_orders():
     data = helper.read_data()
     print("\nList of Cancelled Orders:")
     print(f"{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}")
     print("-" * 50)
-    count = 0
     for person in data:
         if person["status"] == "Cancelled":
-            count += 1
             print(
                 f"{person['order_id']:<10}"
                 f"{person['customer']:<15}"
                 f"₹{helper.order_data[person['order_id']]['total_amount']:<10}"
                 f"{person['order_date']:<15}"
             )
-    print(f"Total Cancelled Orders: {count}")
+    print(f"Total Cancelled Orders: {helper.count_order()[1]}")
 
 def pending_orders():
     data = helper.read_data()
     print("\nList of Pending Orders:")
     print(f"{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}")
     print("-" * 50)
-    count =0
     for person in data:
         if person["status"] == "Pending":
-            count += 1
             print(
                 f"{person['order_id']:<10}"
                 f"{person['customer']:<15}"
                 f"₹{helper.order_data[person['order_id']]['total_amount']:<10}"
                 f"{person['order_date']:<15}"
             )
-    print(f"Total Cancelled Orders: {count}")
+    print(f"Total Cancelled Orders: {helper.count_order()[2]}")
 
 def orders_by_customers():
     orders_placed = {}
