@@ -1,6 +1,7 @@
 import json
 
 order_data = {}
+products = {}
 
 def read_data(file_name = "data/orders.json"):
     try:
@@ -73,20 +74,33 @@ def lowest_order():
             min_customer = [person['order_id'], person['customer'], amt]
     return " - ".join([str(min_customer[0]), min_customer[1], "₹"+str(min_customer[2])]) 
     
-# def total_products():
-#     data = read_data()
-#     products = {}
-#     total = 0
-#     for person in data:
-#         for i in person['items']:
-#             total += 1
-#             if products[i['category']][i['product']] in products:
-#                 products[i['category']][i['product']] += 1
-#             else:
-#                 products[i['category']][i['product']] = 1
+def total_products():
+    data = read_data()
+    total = 0
+    for person in data:
+        for item in person['items']:
+            total += 1
+            if item['category'] in products:
+                if item['product'] in products[item['category']]:
+                    products[item['category']][item['product']] += 1
+                else:
+                    products[item['category']][item['product']] = 1
+            else:
+                products[item['category']] = {}
+                products[item['category']][item['product']] = 1
 
-#     return products
-    
+    return products, total
+
+def frequent_product():
+    max_val = 0
+    max_product = ""
+    for category in products:
+        for product, count in products[category].items():
+            if count > max_val:
+                max_val = count
+                max_product = product
+    return max_product, max_val
+
 class Choice:
     def __enter__(self):
         choice = int(input("Enter choice: "))
@@ -95,6 +109,7 @@ class Choice:
         pass
 
 get_total()
+total_products()
 
 if __name__ == "__main__":
-    total_products()
+    frequent_product()

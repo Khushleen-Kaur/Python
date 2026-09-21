@@ -11,11 +11,15 @@ def sales_analysis():
     print(f"{"Average Order Value":<20}: ₹{hel.total_revenue()/hel.count_order()[3]}")
     print(f"{"Highest Order":<20}: {hel.highest_order()}")
     print(f"{"Lowest Order":<20}: {hel.lowest_order()}")
-    # print(f"\n{"Total Products sold":<20}: {hel.total_products()}")
+    print(f"\n{"Total Products sold":<20}: {hel.total_products()[1]} products")
+    print(f"{"Mostly buyed product":<20}: {hel.frequent_product()[0]}, Frequency - {hel.frequent_product()[1]}")
 
 
 def category_analysis():
-    pass
+    print("\n------ Category Analysis ------")
+    print(f"Revenue by Category:")
+
+    
 
 def customer_analysis():
     pass
@@ -25,3 +29,4 @@ def data_analysis():
 
 if __name__ == "__main__":
     sales_analysis()
+    category_analysis()
