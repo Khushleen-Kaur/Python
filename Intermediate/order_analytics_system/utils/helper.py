@@ -101,6 +101,19 @@ def frequent_product():
                 max_product = product
     return max_product, max_val
 
+def by_category():
+    rev_cat = {}
+    for person in read_data():
+        for item in person['items']:
+            if item['category'] in products:
+                if item['category'] in rev_cat and item['product'] in products[item['category']]:
+                    rev_cat[item['category']] += 1
+                else:
+                    rev_cat[item['category']] = 1
+            else:
+                rev_cat[item['category']] = 1
+    return rev_cat
+
 class Choice:
     def __enter__(self):
         choice = int(input("Enter choice: "))
@@ -113,3 +126,4 @@ total_products()
 
 if __name__ == "__main__":
     frequent_product()
+    print(by_category())

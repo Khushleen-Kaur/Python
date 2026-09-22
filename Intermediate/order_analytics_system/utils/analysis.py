@@ -1,5 +1,6 @@
 import data_analysis as da
 import helper as hel
+# (Revenue by Category (Category name - price - items sold) + most popular, least popular
 
 def sales_analysis():
     print("\n------ Sales Analysis ------")
@@ -14,12 +15,9 @@ def sales_analysis():
     print(f"\n{"Total Products sold":<20}: {hel.total_products()[1]} products")
     print(f"{"Mostly buyed product":<20}: {hel.frequent_product()[0]}, Frequency - {hel.frequent_product()[1]}")
 
-
 def category_analysis():
     print("\n------ Category Analysis ------")
     print(f"Revenue by Category:")
-
-    
 
 def customer_analysis():
     pass
