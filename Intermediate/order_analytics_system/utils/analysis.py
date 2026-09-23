@@ -18,6 +18,12 @@ def sales_analysis():
 def category_analysis():
     print("\n------ Category Analysis ------")
     print(f"Revenue by Category:")
+    data = hel.by_category()
+    print(f"{"Category":<12}  {'Revenue':<7}  {'Quantity'}")
+    print("-"*35)
+    for x in data:
+        print(f"{x:<12} - ₹{data[x]['total']:<7} - {data[x]['quantity']}")
+    print(f"{"\nMostly buyed product":<20}: {hel.frequent_product()[0]}, Frequency - {hel.frequent_product()[1]}")
 
 def customer_analysis():
     pass

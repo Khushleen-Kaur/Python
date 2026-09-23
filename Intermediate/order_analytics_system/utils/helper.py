@@ -79,15 +79,15 @@ def total_products():
     total = 0
     for person in data:
         for item in person['items']:
-            total += 1
+            total += item['quantity']
             if item['category'] in products:
                 if item['product'] in products[item['category']]:
-                    products[item['category']][item['product']] += 1
+                    products[item['category']][item['product']] += item['quantity']
                 else:
-                    products[item['category']][item['product']] = 1
+                    products[item['category']][item['product']] = item['quantity']
             else:
                 products[item['category']] = {}
-                products[item['category']][item['product']] = 1
+                products[item['category']][item['product']] = item['quantity']
 
     return products, total
 
@@ -105,13 +105,14 @@ def by_category():
     rev_cat = {}
     for person in read_data():
         for item in person['items']:
-            if item['category'] in products:
-                if item['category'] in rev_cat and item['product'] in products[item['category']]:
-                    rev_cat[item['category']] += 1
-                else:
-                    rev_cat[item['category']] = 1
+            if item['category'] in rev_cat:
+                rev_cat[item['category']]['total'] += item['price']
+                rev_cat[item['category']]['quantity'] += item['quantity']
             else:
-                rev_cat[item['category']] = 1
+                rev_cat[item['category']] = {
+                    'total' : item['price'],
+                    'quantity' : item['quantity']
+                }
     return rev_cat
 
 class Choice:
@@ -126,4 +127,4 @@ total_products()
 
 if __name__ == "__main__":
     frequent_product()
-    print(by_category())
+    by_category()
