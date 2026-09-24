@@ -101,6 +101,16 @@ def frequent_product():
                 max_product = product
     return max_product, max_val
 
+def least_product():
+    min_val = float('inf')
+    min_product = ""
+    for category in products:
+        for product, count in products[category].items():
+            if count < min_val:
+                min_val = count
+                min_product = product
+    return min_product, min_val
+
 def by_category():
     rev_cat = {}
     for person in read_data():

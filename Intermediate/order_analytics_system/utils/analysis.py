@@ -24,6 +24,7 @@ def category_analysis():
     for x in data:
         print(f"{x:<12} - ₹{data[x]['total']:<7} - {data[x]['quantity']}")
     print(f"{"\nMostly buyed product":<20}: {hel.frequent_product()[0]}, Frequency - {hel.frequent_product()[1]}")
+    print(f"{"Least buyed product":<20}: {hel.least_product()[0]}, Frequency - {hel.least_product()[1]}")
 
 def customer_analysis():
     pass
