@@ -15,8 +15,8 @@
     "order_date": "2026-01-15",
     "status": "Completed",
     "items": [
-      {"product": "Mechanical Keyboard", "category": "Electronics", "price": 9499, "quantity": 1},
-      {"product": "Mouse Pad", "category": "Accessories", "price": 4999, "quantity": 1}
+      {"product": "Mechanical Keyboard", "category": "Electronics", "price": 9500, "quantity": 1},
+      {"product": "Mouse Pad", "category": "Accessories", "price": 5000, "quantity": 1}
     ]
   },
   {

@@ -14,6 +14,7 @@ def sales_analysis():
     print(f"{"Lowest Order":<20}: {hel.lowest_order()}")
     print(f"\n{"Total Products sold":<20}: {hel.total_products()[1]} products")
     print(f"{"Mostly buyed product":<20}: {hel.frequent_product()[0]}, Frequency - {hel.frequent_product()[1]}")
+    print(f"{"Least buyed product":<20}: {hel.least_product()[0]}, Frequency - {hel.least_product()[1]}")
 
 def category_analysis():
     print("\n------ Category Analysis ------")

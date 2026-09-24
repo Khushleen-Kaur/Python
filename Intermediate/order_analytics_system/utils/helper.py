@@ -137,4 +137,4 @@ total_products()
 
 if __name__ == "__main__":
     frequent_product()
-    by_category()
+    print(by_category())
