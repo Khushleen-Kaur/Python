@@ -2,6 +2,7 @@ import json
 
 order_data = {}
 products = {}
+cate = {}
 
 def read_data(file_name = "data/orders.json"):
     try:
@@ -17,18 +18,12 @@ def get_total():
         total = 0
         count = 0
         for item in person["items"]:
-            total += item["price"]
-            count += 1
+            total += item["price"]*item['quantity']
+            count += item['quantity']
         order_data[person["order_id"]] = {
             "total_amount" : total,
             "total_items" : count
         }
-
-# def total_by_order_id(id):
-#     total = order_data[id]['total_amount']
-#     items = order_data[id]['total_items']
-#     return total, items
-
 def count_order():
     data = read_data()
     completed = 0
@@ -112,18 +107,28 @@ def least_product():
     return min_product, min_val
 
 def by_category():
-    rev_cat = {}
     for person in read_data():
         for item in person['items']:
-            if item['category'] in rev_cat:
-                rev_cat[item['category']]['total'] += item['price']
-                rev_cat[item['category']]['quantity'] += item['quantity']
+            if item['category'] in cate:
+                cate[item['category']]['total'] += item['price']*item['quantity']
+                cate[item['category']]['quantity'] += item['quantity']
             else:
-                rev_cat[item['category']] = {
-                    'total' : item['price'],
+                cate[item['category']] = {
+                    'total' : item['price']*item['quantity'],
                     'quantity' : item['quantity']
                 }
-    return rev_cat
+    return cate
+
+def minmax_category():
+    for x in products:
+        min = float('inf')
+        max = 0
+        print(products)
+        for heading, value  in products[x].items():
+            print(heading, value)
+    print("done")
+        
+
 
 class Choice:
     def __enter__(self):
@@ -134,7 +139,8 @@ class Choice:
 
 get_total()
 total_products()
-
+by_category()
 if __name__ == "__main__":
-    frequent_product()
-    print(by_category())
+    # frequent_product()
+    # print(by_category())
+    minmax_category()
