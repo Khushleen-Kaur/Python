@@ -12,9 +12,12 @@ def main():
     suggest, score = hel.upper_letters(password)
     suggestion.append(suggest)
     total_score += score
+    suggest, score = hel.lower_letters(password)
+    suggestion.append(suggest)
+    total_score += score
 
-    print("Final Analysis: ")
-    print(f"{"\nScore":<20}: {total_score}")
+    print("\nFinal Analysis: ")
+    print(f"{"Score":<20}: {total_score}")
 
 
 if __name__ == "__main__":

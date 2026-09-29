@@ -12,8 +12,7 @@ def analyze_length(password):
     else:
         score = 2
         print(f"{"Length":<20}: {len(password)} ✓ ")
-    return suggestion, score
-
+    return suggestion, score 
 def upper_letters(s):
     upper = 0
     suggestion = ""
@@ -29,4 +28,21 @@ def upper_letters(s):
         print(f"{"Uppercase":<20}: {upper} ✗")
         suggestion = "Password must contain atleast one 'Uppercase' character."
     return suggestion,score
+
+def lower_letters(s):
+    lower = 0
+    suggestion = ""
+    for i in s:
+        if i.isalpha():
+            if i == i.lower():
+                lower += 1
+    if lower > 0:
+        score = 1
+        print(f"{"Lowercase":<20}: {lower} ✓")
+    else:
+        score = 0
+        print(f"{"Lowercase":<20}: {lower} ✗")
+        suggestion = "Password must contain atleast one 'Lowercase' character."
+    return suggestion,score
+
 
