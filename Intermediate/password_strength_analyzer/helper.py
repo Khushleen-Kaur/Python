@@ -45,4 +45,17 @@ def lower_letters(s):
         suggestion = "Password must contain atleast one 'Lowercase' character."
     return suggestion,score
 
-
+def digits(s):
+    count = 0
+    suggestion = ""
+    for i in s:
+        if i.isdigit():
+            count += 1
+    if count > 0:
+        score = 1
+        print(f"{"Digit":<20}: {count} ✓")
+    else:
+        score = 0
+        print(f"{"Digit":<20}: {count} ✗")
+        suggestion = "Password must contain atleast one 'Digit'."
+    return suggestion,score

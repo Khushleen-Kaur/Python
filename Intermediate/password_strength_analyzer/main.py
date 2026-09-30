@@ -15,6 +15,9 @@ def main():
     suggest, score = hel.lower_letters(password)
     suggestion.append(suggest)
     total_score += score
+    suggest, score = hel.digits(password)
+    suggestion.append(suggest)
+    total_score += score
 
     print("\nFinal Analysis: ")
     print(f"{"Score":<20}: {total_score}")
