@@ -59,3 +59,15 @@ def digits(s):
         print(f"{"Digit":<20}: {count} ✗")
         suggestion = "Password must contain atleast one 'Digit'."
     return suggestion,score
+
+def display(sug):
+    print("\n--------------------- Suggestions ---------------------")
+    count = 1
+    for i in sug:
+        if i != '':
+            print(str(count) + ". " + i)
+            count += 1
+    if count == 1:
+        print("Strong Password.")
+        print("No suggestions!")
+
