@@ -21,7 +21,7 @@ def upper_letters(s):
             if i == i.upper():
                 upper += 1
     if upper >0:
-        score = 1
+        score = 2
         print(f"{"Uppercase":<20}: {upper} ✓")
     else:
         score = 0
@@ -37,13 +37,11 @@ def lower_letters(s):
             if i == i.lower():
                 lower += 1
     if lower > 0:
-        score = 1
         print(f"{"Lowercase":<20}: {lower} ✓")
     else:
-        score = 0
         print(f"{"Lowercase":<20}: {lower} ✗")
         suggestion = "Password must contain atleast one 'Lowercase' character."
-    return suggestion,score
+    return suggestion, 0
 
 def digits(s):
     count = 0
@@ -60,6 +58,23 @@ def digits(s):
         suggestion = "Password must contain atleast one 'Digit'."
     return suggestion,score
 
+def specail_characters(s):
+    special = 0
+    suggestion = ""
+    specail_character = r'[!@#$%^&*()_+.,\/]'
+    for i in s:
+        if i in specail_character:
+            special += 1
+    if special > 0:
+        score = 1
+        print(f"{"Special characters":<20}: {special} ✓")
+    else:
+        score = 0
+        print(f"{"Special characters":<20}: {special} ✗")
+        suggestion = "Password must contain atleast one 'Special' character."
+    return suggestion,score
+
+
 def display(sug):
     print("\n--------------------- Suggestions ---------------------")
     count = 1
@@ -70,4 +85,3 @@ def display(sug):
     if count == 1:
         print("Strong Password.")
         print("No suggestions!")
-

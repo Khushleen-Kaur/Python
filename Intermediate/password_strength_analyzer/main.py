@@ -6,7 +6,7 @@ def main():
     print()
     suggestion = []
     total_score = 0
-    functions = [hel.analyze_length(password), hel.upper_letters(password), hel.lower_letters(password), hel.digits(password)]
+    functions = [hel.analyze_length(password), hel.upper_letters(password), hel.lower_letters(password), hel.digits(password), hel.specail_characters(password)]
     
     for fun in functions:
         suggest, score = fun
