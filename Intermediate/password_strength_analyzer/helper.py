@@ -1,4 +1,7 @@
 
+common_pass_examples = ["aaaaaaaa", "abcdefgh", "00000000", "12345678", "qwerty", "123456", "111111", "abcabc", "admin", "letmein", "password"]
+
+
 def analyze_length(password):
     suggestion = ""
     if(len(password) < 8):
@@ -10,7 +13,7 @@ def analyze_length(password):
         print(f"{"Length":<20}: {len(password)} ✗")
         suggestion = "Moderate password: Length must be 12+ for strong password."
     else:
-        score = 2
+        score = 3
         print(f"{"Length":<20}: {len(password)} ✓ ")
     return suggestion, score 
 def upper_letters(s):
@@ -37,11 +40,13 @@ def lower_letters(s):
             if i == i.lower():
                 lower += 1
     if lower > 0:
+        score = 1
         print(f"{"Lowercase":<20}: {lower} ✓")
     else:
+        score = 0
         print(f"{"Lowercase":<20}: {lower} ✗")
         suggestion = "Password must contain atleast one 'Lowercase' character."
-    return suggestion, 0
+    return suggestion, score
 
 def digits(s):
     count = 0
@@ -66,12 +71,23 @@ def specail_characters(s):
         if i in specail_character:
             special += 1
     if special > 0:
-        score = 1
+        score = 2
         print(f"{"Special characters":<20}: {special} ✓")
     else:
         score = 0
         print(f"{"Special characters":<20}: {special} ✗")
         suggestion = "Password must contain atleast one 'Special' character."
+    return suggestion,score
+
+def comman_passwords(s):
+    suggestion = ""
+    if s in common_pass_examples:
+        score = 0
+        print(f"{"Common password":<20}: YES  ✗")
+        suggestion = "It is a common Password, Password must contain atleast one 'Lowercase character', 'Uppercase character', 'Special character, 'Digit'."
+    else:
+        score = 1
+        print(f"{"Common password":<20}: NO  ✓")
     return suggestion,score
 
 
