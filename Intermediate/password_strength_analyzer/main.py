@@ -1,6 +1,14 @@
 import helper as hel
 import rules 
 
+def check_strength(score):
+    if score <=3:
+        print(f"{"Strength":<20}: Weak Password")
+    elif 4 <= score <=6:
+        print(f"{"Strength":<20}: Moderate Password")
+    if 7 <= score <=10:
+        print(f"{"Strength":<20}: Strong Password")
+
 def check_password():
     print("\n===== PASSWORD ANALYZER =====")
     password = input("Enter password: ")
@@ -22,29 +30,32 @@ def check_password():
 
     print("\n--------------------- Final Analysis: ---------------------")
     print(f"{"Password":<20}: {"*"*len(password)}")
+    check_strength(total_score)
     print(f"{"Score":<20}: {total_score}/10")
     hel.display(suggestion)
     print()
 
 def main():
-    print("\n========== Password ==========")
-    print("1. Rules for strong password")
-    print("2. Check Strength")
-    try:
-        choice = int(input("Enter choice: "))
-        match choice:
-            case 1:
-                rules.rules()
-            case 2:
-                check_password()
-            case _ :
-                print("Please, Enter a valid choice.\n")
-                main()
+    while True:
+        print("\n========== Password ==========")
+        print("1. Rules for strong password")
+        print("2. Check Strength")
+        print("3. Exit")
+        try:
+            choice = int(input("Enter choice: "))
+            if choice == 3 : 
+                print("\nThank you for Visiting!\n")
+                break
+            match choice:
+                case 1:
+                    rules.rules()
+                case 2:
+                    check_password()
+                case _ :
+                    print("Please, Enter a valid choice.\n")
 
-    except ValueError:
-        print("Please, Enter a valid number choice.")
-        main()
-
+        except ValueError:
+            print("Please, Enter a valid number choice.")
 
 if __name__ == "__main__":
     main()
