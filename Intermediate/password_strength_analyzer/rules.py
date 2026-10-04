@@ -4,7 +4,7 @@ def rules():
     print("1. Length: ")
     print(f"   {"If length has less then 8 characters":<60} :score 0")
     print(f"   {"If length has 8 or more characters  but less then 12":<60} :score 1")
-    print(f"   {"If length has more then 8 characters":<60} :score 2")
+    print(f"   {"If length has 12 or more characters":<60} :score 3")
 
     print("\n2. Uppercase Character: ")
     print(f"   {"No uppercase characters in the password":<60} :score 0")
@@ -29,8 +29,6 @@ def rules():
     #     print("   "+p)
     print(f"   {"If password appears in given list":<60} :score 0")
     print(f"   {"If password dont appear in the list":<60} :score 1")
-
-
 
 if __name__ == "__main__":
     rules()

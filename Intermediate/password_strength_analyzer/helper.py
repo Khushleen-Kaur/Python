@@ -63,7 +63,7 @@ def digits(s):
         suggestion = "Password must contain atleast one 'Digit'."
     return suggestion,score
 
-def specail_characters(s):
+def special_characters(s):
     special = 0
     suggestion = ""
     specail_character = r'[!@#$%^&*()_+.,\/]'
@@ -79,12 +79,12 @@ def specail_characters(s):
         suggestion = "Password must contain atleast one 'Special' character."
     return suggestion,score
 
-def comman_passwords(s):
+def common_passwords(s):
     suggestion = ""
     if s in common_pass_examples:
         score = 0
         print(f"{"Common password":<20}: YES  ✗")
-        suggestion = "It is a common Password, Password must contain atleast one 'Lowercase character', 'Uppercase character', 'Special character, 'Digit'."
+        suggestion = "This is a commonly used password. Choose a less predictable password."
     else:
         score = 1
         print(f"{"Common password":<20}: NO  ✓")
