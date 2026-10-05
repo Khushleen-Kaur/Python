@@ -1,5 +1,6 @@
 import data_analysis as da
 import helper as hel
+import customer_analysis as ca
 # (Revenue by Category (Category name - price - items sold) + most popular, least popular
 
 def sales_analysis():
@@ -13,8 +14,12 @@ def sales_analysis():
     print(f"{"Highest Order":<20}: {hel.highest_order()}")
     print(f"{"Lowest Order":<20}: {hel.lowest_order()}")
     print(f"\n{"Total Products sold":<20}: {hel.total_products()[1]} products")
-    print(f"{"Mostly buyed product":<20}: {hel.frequent_product()[0]}, Frequency - {hel.frequent_product()[1]}")
-    print(f"{"Least buyed product":<20}: {hel.least_product()[0]}, Frequency - {hel.least_product()[1]}")
+    print(f"{"Mostly buyed product":<20}: Frequency - {hel.frequent_product()[1]/2}")
+    print(f"{"Names":<20}: {hel.frequent_product()[0]}")
+    print(f"{"Least buyed product":<20}: Frequency - {hel.least_product()[1]/2}")
+    print(f"{"Names":<20}: {hel.least_product()[0]}")
+
+    print("\n----- Sales Analysis Complete -----\n")
 
 def category_analysis():
     print("\n------ Category Analysis ------")
@@ -24,15 +29,20 @@ def category_analysis():
     print("-"*35)
     for x in data:
         print(f"{x:<12} - ₹{data[x]['total']:<7} - {data[x]['quantity']}")
-    print(f"{"\nMostly buyed product":<20}: {hel.frequent_product()[0]}, Frequency - {hel.frequent_product()[1]}")
-    print(f"{"Least buyed product":<20}: {hel.least_product()[0]}, Frequency - {hel.least_product()[1]}")
+    print(f"{"Mostly buyed product":<20}: Frequency - {hel.frequent_product()[1]}")
+    print(f"{"Names":<20}: {hel.frequent_product()[0]}")
+    print(f"{"Least buyed product":<20}: Frequency - {hel.least_product()[1]}")
+    print(f"{"Names":<20}: {hel.least_product()[0]}")
+
+    print("\n----- Category Analysis Complete -----\n")
 
 def customer_analysis():
-    pass
+    ca.analysis()
 
 def data_analysis():
     da.data_analysis()
 
 if __name__ == "__main__":
-    sales_analysis()
-    category_analysis()
+    # sales_analysis()
+    # category_analysis()
+    customer_analysis()

@@ -24,6 +24,7 @@ def get_total():
             "total_amount" : total,
             "total_items" : count
         }
+
 def count_order():
     data = read_data()
     completed = 0
@@ -88,22 +89,32 @@ def total_products():
 
 def frequent_product():
     max_val = 0
-    max_product = ""
+    max_product = []
     for category in products:
         for product, count in products[category].items():
             if count > max_val:
                 max_val = count
-                max_product = product
+
+    for category in products:
+        for product, count in products[category].items():
+            if count == max_val:
+                max_product.append(product)
     return max_product, max_val
 
 def least_product():
     min_val = float('inf')
-    min_product = ""
+    min_product = []
+
     for category in products:
         for product, count in products[category].items():
             if count < min_val:
                 min_val = count
-                min_product = product
+
+    for category in products:
+        for product, count in products[category].items():
+            if count == min_val:
+                min_product.append(product)
+
     return min_product, min_val
 
 def by_category():
@@ -143,4 +154,6 @@ by_category()
 if __name__ == "__main__":
     # frequent_product()
     # print(by_category())
-    minmax_category()
+    # minmax_category()
+    print(least_product())
+    print(products)

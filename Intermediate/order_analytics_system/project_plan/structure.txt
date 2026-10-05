@@ -1,0 +1,10 @@
+# Helper
+    read_data -> returns data from order.json
+    get_total -> makes order_data (order_id, pice, no. of products)
+    count_order -> returns [completed, cancelled, pending, total]
+    total_revenue -> returns total revenue
+    highest_order -> returns (1002 - Gopi - ₹14500)
+    lowest_order -> returns (1002 - Gopi - ₹14500)
+    total_products -> products , total products purcahsed 
+    frequent_product -> maxproducts[] , count
+    least_product -> minproducts[] , count
