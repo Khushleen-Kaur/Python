@@ -8,3 +8,5 @@
     total_products -> products , total products purcahsed 
     frequent_product -> maxproducts[] , count
     least_product -> minproducts[] , count
+    by_catrgory -> cate = {'name' : total, quantity}
+    

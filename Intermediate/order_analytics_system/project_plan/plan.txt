@@ -15,8 +15,8 @@ most popular, ✔
 least popular ✔
 
 3. Customer Analysis 
-customers - total price - total items - order count 
-top 3 customers and their details
+customers - total price - total items - order count ✔
+top 3 customers and their details ✔
 
 4. Data Analysis
 Todays order

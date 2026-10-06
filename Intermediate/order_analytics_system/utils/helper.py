@@ -89,7 +89,7 @@ def total_products():
 
 def frequent_product():
     max_val = 0
-    max_product = []
+    max_products = []
     for category in products:
         for product, count in products[category].items():
             if count > max_val:
@@ -98,12 +98,12 @@ def frequent_product():
     for category in products:
         for product, count in products[category].items():
             if count == max_val:
-                max_product.append(product)
-    return max_product, max_val
+                max_products.append(product)
+    return max_products, max_val
 
 def least_product():
     min_val = float('inf')
-    min_product = []
+    min_products = []
 
     for category in products:
         for product, count in products[category].items():
@@ -113,9 +113,9 @@ def least_product():
     for category in products:
         for product, count in products[category].items():
             if count == min_val:
-                min_product.append(product)
+                min_products.append(product)
 
-    return min_product, min_val
+    return min_products, min_val
 
 def by_category():
     for person in read_data():
@@ -129,17 +129,6 @@ def by_category():
                     'quantity' : item['quantity']
                 }
     return cate
-
-def minmax_category():
-    for x in products:
-        min = float('inf')
-        max = 0
-        print(products)
-        for heading, value  in products[x].items():
-            print(heading, value)
-    print("done")
-        
-
 
 class Choice:
     def __enter__(self):
@@ -155,5 +144,4 @@ if __name__ == "__main__":
     # frequent_product()
     # print(by_category())
     # minmax_category()
-    print(least_product())
-    print(products)
+    print()
