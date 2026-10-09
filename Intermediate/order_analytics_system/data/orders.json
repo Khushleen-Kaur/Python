@@ -1,54 +1,1324 @@
 [
   {
     "order_id": 1001,
-    "customer": "Khush",
-    "order_date": "2026-01-08",
-    "status": "Pending",
+    "customer": "Bina Mathew",
+    "order_date": "2025-01-03",
+    "status": "Completed",
     "items": [
-      {"product": "Wireless Mouse", "category": "Electronics", "price": 750, "quantity": 1},
-      {"product": "Notebook", "category": "Stationery", "price": 150, "quantity": 2}
+      {
+        "product": "USB-C Hub",
+        "category": "Electronics",
+        "price": 1599,
+        "quantity": 2
+      },
+      {
+        "product": "Backpack",
+        "category": "Fashion",
+        "price": 1599,
+        "quantity": 1
+      }
     ]
   },
   {
     "order_id": 1002,
-    "customer": "Gopi",
-    "order_date": "2026-01-15",
+    "customer": "Kabir Verma",
+    "order_date": "2025-01-11",
+    "status": "Pending",
+    "items": [
+      {
+        "product": "Desk Lamp",
+        "category": "Home",
+        "price": 1299,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1003,
+    "customer": "Aarav Sharma",
+    "order_date": "2025-01-19",
     "status": "Completed",
     "items": [
-      {"product": "Mechanical Keyboard", "category": "Electronics", "price": 9500, "quantity": 1},
-      {"product": "Mouse Pad", "category": "Accessories", "price": 5000, "quantity": 1}
+      {
+        "product": "Java Programming Book",
+        "category": "Books",
+        "price": 799,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1004,
+    "customer": "Priya Iyer",
+    "order_date": "2025-02-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Notebook",
+        "category": "Stationery",
+        "price": 149,
+        "quantity": 1
+      },
+      {
+        "product": "Sunscreen",
+        "category": "Beauty",
+        "price": 649,
+        "quantity": 3
+      },
+      {
+        "product": "Smart Watch",
+        "category": "Electronics",
+        "price": 4999,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1005,
+    "customer": "Bhavya Jain",
+    "order_date": "2025-02-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Gaming Headset",
+        "category": "Electronics",
+        "price": 2799,
+        "quantity": 3
+      },
+      {
+        "product": "Running Shoes",
+        "category": "Fashion",
+        "price": 3299,
+        "quantity": 2
+      },
+      {
+        "product": "Data Science Book",
+        "category": "Books",
+        "price": 899,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1006,
+    "customer": "Manya Sood",
+    "order_date": "2025-02-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Sunscreen",
+        "category": "Beauty",
+        "price": 649,
+        "quantity": 1
+      },
+      {
+        "product": "Moisturizer",
+        "category": "Beauty",
+        "price": 599,
+        "quantity": 3
+      },
+      {
+        "product": "Face Wash",
+        "category": "Beauty",
+        "price": 399,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1007,
+    "customer": "Om Prakash",
+    "order_date": "2025-03-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Yoga Mat",
+        "category": "Lifestyle",
+        "price": 999,
+        "quantity": 2
+      },
+      {
+        "product": "Water Bottle",
+        "category": "Lifestyle",
+        "price": 699,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1008,
+    "customer": "Varun Pillai",
+    "order_date": "2025-03-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Python Programming Book",
+        "category": "Books",
+        "price": 699,
+        "quantity": 1
+      },
+      {
+        "product": "USB-C Hub",
+        "category": "Electronics",
+        "price": 1599,
+        "quantity": 1
+      },
+      {
+        "product": "USB-C Cable",
+        "category": "Electronics",
+        "price": 399,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1009,
+    "customer": "Gauri Bansal",
+    "order_date": "2025-03-19",
+    "status": "Cancelled",
+    "items": [
+      {
+        "product": "Notebook",
+        "category": "Stationery",
+        "price": 149,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1010,
+    "customer": "Vivaan Shah",
+    "order_date": "2025-04-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Wireless Mouse",
+        "category": "Electronics",
+        "price": 799,
+        "quantity": 3
+      },
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1011,
+    "customer": "Aisha Khan",
+    "order_date": "2025-04-27",
+    "status": "Pending",
+    "items": [
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1012,
+    "customer": "Rhea Fernandes",
+    "order_date": "2025-05-03",
+    "status": "Cancelled",
+    "items": [
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 2
+      },
+      {
+        "product": "Data Science Book",
+        "category": "Books",
+        "price": 899,
+        "quantity": 3
+      },
+      {
+        "product": "USB-C Cable",
+        "category": "Electronics",
+        "price": 399,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1013,
+    "customer": "Aniket Kulkarni",
+    "order_date": "2025-05-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Smart Watch",
+        "category": "Electronics",
+        "price": 4999,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1014,
+    "customer": "Harsh Vora",
+    "order_date": "2025-05-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Desk Lamp",
+        "category": "Home",
+        "price": 1299,
+        "quantity": 2
+      },
+      {
+        "product": "Java Programming Book",
+        "category": "Books",
+        "price": 799,
+        "quantity": 2
+      },
+      {
+        "product": "USB-C Cable",
+        "category": "Electronics",
+        "price": 399,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1015,
+    "customer": "Arjun Rao",
+    "order_date": "2025-06-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Yoga Mat",
+        "category": "Lifestyle",
+        "price": 999,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1016,
+    "customer": "Isha Nair",
+    "order_date": "2025-06-11",
+    "status": "Cancelled",
+    "items": [
+      {
+        "product": "Sunglasses",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 3
+      },
+      {
+        "product": "Python Programming Book",
+        "category": "Books",
+        "price": 699,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1017,
+    "customer": "Ananya Patel",
+    "order_date": "2025-06-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Water Bottle",
+        "category": "Lifestyle",
+        "price": 699,
+        "quantity": 1
+      },
+      {
+        "product": "USB-C Hub",
+        "category": "Electronics",
+        "price": 1599,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1018,
+    "customer": "Rohan Mehta",
+    "order_date": "2025-06-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Laptop Stand",
+        "category": "Accessories",
+        "price": 1899,
+        "quantity": 1
+      },
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1019,
+    "customer": "Aarav Sharma",
+    "order_date": "2025-07-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Notebook",
+        "category": "Stationery",
+        "price": 149,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1020,
+    "customer": "Ira Chawla",
+    "order_date": "2025-07-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Gaming Headset",
+        "category": "Electronics",
+        "price": 2799,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1021,
+    "customer": "Aman Chopra",
+    "order_date": "2025-08-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 2
+      },
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1022,
+    "customer": "Saanvi Bhat",
+    "order_date": "2025-09-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Water Bottle",
+        "category": "Lifestyle",
+        "price": 699,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1023,
+    "customer": "Zara Mirza",
+    "order_date": "2025-09-11",
+    "status": "Cancelled",
+    "items": [
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 1
+      },
+      {
+        "product": "Sunscreen",
+        "category": "Beauty",
+        "price": 649,
+        "quantity": 1
+      },
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1024,
+    "customer": "Nikhil Shetty",
+    "order_date": "2025-09-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Monitor",
+        "category": "Electronics",
+        "price": 12999,
+        "quantity": 2
+      },
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1025,
+    "customer": "Rohan Mehta",
+    "order_date": "2025-10-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Wireless Mouse",
+        "category": "Electronics",
+        "price": 799,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1026,
+    "customer": "Reyansh Das",
+    "order_date": "2025-10-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Laptop Stand",
+        "category": "Accessories",
+        "price": 1899,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1027,
+    "customer": "Lakshmi Pillai",
+    "order_date": "2025-10-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Face Wash",
+        "category": "Beauty",
+        "price": 399,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1028,
+    "customer": "Sanya Sinha",
+    "order_date": "2025-10-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Notebook",
+        "category": "Stationery",
+        "price": 149,
+        "quantity": 2
+      },
+      {
+        "product": "Yoga Mat",
+        "category": "Lifestyle",
+        "price": 999,
+        "quantity": 1
+      },
+      {
+        "product": "Face Wash",
+        "category": "Beauty",
+        "price": 399,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1029,
+    "customer": "Aarav Sharma",
+    "order_date": "2025-11-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Mechanical Keyboard",
+        "category": "Electronics",
+        "price": 3499,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1030,
+    "customer": "Reyansh Das",
+    "order_date": "2025-11-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Mechanical Keyboard",
+        "category": "Electronics",
+        "price": 3499,
+        "quantity": 2
+      },
+      {
+        "product": "Moisturizer",
+        "category": "Beauty",
+        "price": 599,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1031,
+    "customer": "Nisha Thomas",
+    "order_date": "2025-11-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Java Programming Book",
+        "category": "Books",
+        "price": 799,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1032,
+    "customer": "Aditya Singh",
+    "order_date": "2025-11-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Data Science Book",
+        "category": "Books",
+        "price": 899,
+        "quantity": 3
+      },
+      {
+        "product": "Gaming Headset",
+        "category": "Electronics",
+        "price": 2799,
+        "quantity": 1
+      },
+      {
+        "product": "Mechanical Keyboard",
+        "category": "Electronics",
+        "price": 3499,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1033,
+    "customer": "Kabir Verma",
+    "order_date": "2025-12-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1034,
+    "customer": "Siddharth Pal",
+    "order_date": "2025-12-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Handbag",
+        "category": "Fashion",
+        "price": 2199,
+        "quantity": 1
+      },
+      {
+        "product": "USB-C Hub",
+        "category": "Electronics",
+        "price": 1599,
+        "quantity": 3
+      },
+      {
+        "product": "Desk Lamp",
+        "category": "Home",
+        "price": 1299,
+        "quantity": 3
+      }
     ]
   },
   {
     "order_id": 1035,
-    "customer": "Vikram",
-    "order_date": "2026-09-15",
-    "status": "Cancelled",
+    "customer": "Sameer Qureshi",
+    "order_date": "2025-12-19",
+    "status": "Completed",
     "items": [
-      {"product": "Monitor", "category": "Electronics", "price": 12999, "quantity": 1},
-      {"product": "USB-C Cable", "category": "Electronics", "price": 399, "quantity": 2}
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1036,
+    "customer": "Tara Mukherjee",
+    "order_date": "2025-12-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Desk Lamp",
+        "category": "Home",
+        "price": 1299,
+        "quantity": 2
+      },
+      {
+        "product": "Data Science Book",
+        "category": "Books",
+        "price": 899,
+        "quantity": 2
+      }
     ]
   },
   {
     "order_id": 1037,
-    "customer": "Khush",
-    "order_date": "2026-09-17",
+    "customer": "Parth Trivedi",
+    "order_date": "2026-01-03",
     "status": "Completed",
     "items": [
-      {"product": "Laptop Stand", "category": "Accessories", "price": 1899, "quantity": 1},
-      {"product": "Wireless Mouse", "category": "Electronics", "price": 799, "quantity": 1},
-      {"product": "Notebook", "category": "Stationery", "price": 149, "quantity": 2}
+      {
+        "product": "Face Wash",
+        "category": "Beauty",
+        "price": 399,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1038,
+    "customer": "Aryan Malhotra",
+    "order_date": "2026-01-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Handbag",
+        "category": "Fashion",
+        "price": 2199,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1039,
+    "customer": "Vanshika Sen",
+    "order_date": "2026-01-19",
+    "status": "Cancelled",
+    "items": [
+      {
+        "product": "Sports T-Shirt",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 2
+      },
+      {
+        "product": "Python Programming Book",
+        "category": "Books",
+        "price": 699,
+        "quantity": 1
+      }
     ]
   },
   {
     "order_id": 1040,
-    "customer": "Aditi",
-    "order_date": "2026-09-18",
+    "customer": "Vivaan Shah",
+    "order_date": "2026-01-27",
     "status": "Completed",
     "items": [
-      {"product": "Handbag", "category": "Fashion", "price": 2199, "quantity": 1},
-      {"product": "Sunglasses", "category": "Fashion", "price": 999, "quantity": 1},
-      {"product": "Perfume", "category": "Beauty", "price": 1899, "quantity": 1}
+      {
+        "product": "Office Chair",
+        "category": "Home",
+        "price": 8999,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1041,
+    "customer": "Farhan Ali",
+    "order_date": "2026-02-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 3
+      },
+      {
+        "product": "Notebook",
+        "category": "Stationery",
+        "price": 149,
+        "quantity": 2
+      },
+      {
+        "product": "Monitor",
+        "category": "Electronics",
+        "price": 12999,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1042,
+    "customer": "Rohan Mehta",
+    "order_date": "2026-02-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 2
+      },
+      {
+        "product": "USB-C Cable",
+        "category": "Electronics",
+        "price": 399,
+        "quantity": 1
+      },
+      {
+        "product": "Backpack",
+        "category": "Fashion",
+        "price": 1599,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1043,
+    "customer": "Esha Gupta",
+    "order_date": "2026-03-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Face Wash",
+        "category": "Beauty",
+        "price": 399,
+        "quantity": 3
+      },
+      {
+        "product": "Sports T-Shirt",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 3
+      },
+      {
+        "product": "Office Chair",
+        "category": "Home",
+        "price": 8999,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1044,
+    "customer": "Devika Menon",
+    "order_date": "2026-03-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Notebook",
+        "category": "Stationery",
+        "price": 149,
+        "quantity": 3
+      },
+      {
+        "product": "Sports T-Shirt",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1045,
+    "customer": "Anushka Roy",
+    "order_date": "2026-03-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Smart Watch",
+        "category": "Electronics",
+        "price": 4999,
+        "quantity": 1
+      },
+      {
+        "product": "Running Shoes",
+        "category": "Fashion",
+        "price": 3299,
+        "quantity": 3
+      },
+      {
+        "product": "USB-C Hub",
+        "category": "Electronics",
+        "price": 1599,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1046,
+    "customer": "Avni Desai",
+    "order_date": "2026-04-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Sports T-Shirt",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1047,
+    "customer": "Shaurya Gill",
+    "order_date": "2026-04-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Hoodie",
+        "category": "Fashion",
+        "price": 1799,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1048,
+    "customer": "Shreya Dutta",
+    "order_date": "2026-04-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 3
+      },
+      {
+        "product": "Running Shoes",
+        "category": "Fashion",
+        "price": 3299,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1049,
+    "customer": "Arjun Rao",
+    "order_date": "2026-04-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1050,
+    "customer": "Jatin Arora",
+    "order_date": "2026-05-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Sunglasses",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1051,
+    "customer": "Pallavi Bose",
+    "order_date": "2026-05-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Hoodie",
+        "category": "Fashion",
+        "price": 1799,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1052,
+    "customer": "Pranav Ghosh",
+    "order_date": "2026-05-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Running Shoes",
+        "category": "Fashion",
+        "price": 3299,
+        "quantity": 3
+      },
+      {
+        "product": "Gaming Headset",
+        "category": "Electronics",
+        "price": 2799,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1053,
+    "customer": "Priya Iyer",
+    "order_date": "2026-06-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Sunglasses",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 1
+      },
+      {
+        "product": "Notebook",
+        "category": "Stationery",
+        "price": 149,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1054,
+    "customer": "Ananya Patel",
+    "order_date": "2026-06-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Face Wash",
+        "category": "Beauty",
+        "price": 399,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1055,
+    "customer": "Uday Saxena",
+    "order_date": "2026-07-03",
+    "status": "Pending",
+    "items": [
+      {
+        "product": "Mouse Pad",
+        "category": "Accessories",
+        "price": 499,
+        "quantity": 3
+      },
+      {
+        "product": "Backpack",
+        "category": "Fashion",
+        "price": 1599,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1056,
+    "customer": "Meera Joshi",
+    "order_date": "2026-07-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Smart Watch",
+        "category": "Electronics",
+        "price": 4999,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1057,
+    "customer": "Diya Kapoor",
+    "order_date": "2026-07-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Laptop Stand",
+        "category": "Accessories",
+        "price": 1899,
+        "quantity": 1
+      },
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1058,
+    "customer": "Simran Kaur",
+    "order_date": "2026-08-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "USB-C Cable",
+        "category": "Electronics",
+        "price": 399,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1059,
+    "customer": "Tanmay Purohit",
+    "order_date": "2026-08-11",
+    "status": "Pending",
+    "items": [
+      {
+        "product": "Sunscreen",
+        "category": "Beauty",
+        "price": 649,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1060,
+    "customer": "Ananya Patel",
+    "order_date": "2026-08-19",
+    "status": "Pending",
+    "items": [
+      {
+        "product": "Sunglasses",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 1
+      },
+      {
+        "product": "Office Chair",
+        "category": "Home",
+        "price": 8999,
+        "quantity": 1
+      },
+      {
+        "product": "Moisturizer",
+        "category": "Beauty",
+        "price": 599,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1061,
+    "customer": "Kavya Reddy",
+    "order_date": "2026-08-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Laptop Stand",
+        "category": "Accessories",
+        "price": 1899,
+        "quantity": 1
+      },
+      {
+        "product": "Gaming Headset",
+        "category": "Electronics",
+        "price": 2799,
+        "quantity": 1
+      },
+      {
+        "product": "Sunglasses",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": 1062,
+    "customer": "Dhruv Sethi",
+    "order_date": "2026-09-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Laptop Stand",
+        "category": "Accessories",
+        "price": 1899,
+        "quantity": 3
+      },
+      {
+        "product": "Sunglasses",
+        "category": "Fashion",
+        "price": 999,
+        "quantity": 1
+      },
+      {
+        "product": "Yoga Mat",
+        "category": "Lifestyle",
+        "price": 999,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1063,
+    "customer": "Kunal Mishra",
+    "order_date": "2026-09-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Face Wash",
+        "category": "Beauty",
+        "price": 399,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1064,
+    "customer": "Manav Khanna",
+    "order_date": "2026-09-27",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Mechanical Keyboard",
+        "category": "Electronics",
+        "price": 3499,
+        "quantity": 2
+      },
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1065,
+    "customer": "Meera Joshi",
+    "order_date": "2026-10-03",
+    "status": "Pending",
+    "items": [
+      {
+        "product": "Python Programming Book",
+        "category": "Books",
+        "price": 699,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1066,
+    "customer": "Isha Nair",
+    "order_date": "2026-11-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Laptop Stand",
+        "category": "Accessories",
+        "price": 1899,
+        "quantity": 1
+      },
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": 1067,
+    "customer": "Diya Kapoor",
+    "order_date": "2026-11-11",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Monitor",
+        "category": "Electronics",
+        "price": 12999,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1068,
+    "customer": "Isha Nair",
+    "order_date": "2026-11-27",
+    "status": "Cancelled",
+    "items": [
+      {
+        "product": "Phone Stand",
+        "category": "Accessories",
+        "price": 599,
+        "quantity": 2
+      },
+      {
+        "product": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 2499,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1069,
+    "customer": "Yash Tandon",
+    "order_date": "2026-12-03",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "Handbag",
+        "category": "Fashion",
+        "price": 2199,
+        "quantity": 3
+      },
+      {
+        "product": "Yoga Mat",
+        "category": "Lifestyle",
+        "price": 999,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": 1070,
+    "customer": "Ritvik Anand",
+    "order_date": "2026-12-19",
+    "status": "Completed",
+    "items": [
+      {
+        "product": "USB-C Hub",
+        "category": "Electronics",
+        "price": 1599,
+        "quantity": 3
+      },
+      {
+        "product": "Running Shoes",
+        "category": "Fashion",
+        "price": 3299,
+        "quantity": 2
+      },
+      {
+        "product": "Gaming Headset",
+        "category": "Electronics",
+        "price": 2799,
+        "quantity": 1
+      }
     ]
   }
 ]

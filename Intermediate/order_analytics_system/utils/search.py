@@ -1,52 +1,56 @@
-# from rich import print
-import helper
+from rich import print
+from utils import helper
+import main
+from rich.console import Console
+
 # search by customer_name, order_id 
+console = Console()
 
 def completed_orders():
     data = helper.read_data()
-    print("\nList of Completed Orders:")
-    print(f"{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}")
-    print("-" * 50)
+    print("\n[bold italic #9A9AEB]List of Completed Orders:[/bold italic #9A9AEB]")
+    print(f"[bold #CCCCFF]{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}[/bold #CCCCFF]")
+    print("[bold #CCCCFF]-[/bold #CCCCFF]" * 50)
     for person in data:
         if person["status"] == "Completed":
             print(
-                f"{person['order_id']:<10}"
-                f"{person['customer']:<15}"
-                f"₹{helper.order_data[person['order_id']]['total_amount']:<10}"
-                f"{person['order_date']:<15}"
+                f"[not bold #E6E6E6]{person['order_id']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['customer']:<15}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]₹{helper.order_data[person['order_id']]['total_amount']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['order_date']:<15}[/not bold #E6E6E6]"
             )
 
-    print(f"Total completed orders: {helper.count_order()[0]}")
+    print(f"[#9A9AEB]Total completed orders: {helper.count_order()[0]}[/#9A9AEB]")
 
 def cancelled_orders():
     data = helper.read_data()
-    print("\nList of Cancelled Orders:")
-    print(f"{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}")
-    print("-" * 50)
+    print("\n[bold italic #9A9AEB]List of Cancelled Orders:[/bold italic #9A9AEB]")
+    print(f"[bold #CCCCFF]{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}[bold #CCCCFF]")
+    print("[bold #CCCCFF]-[/bold #CCCCFF]" * 50)
     for person in data:
         if person["status"] == "Cancelled":
             print(
-                f"{person['order_id']:<10}"
-                f"{person['customer']:<15}"
-                f"₹{helper.order_data[person['order_id']]['total_amount']:<10}"
-                f"{person['order_date']:<15}"
+                f"[not bold #E6E6E6]{person['order_id']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['customer']:<15}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]₹{helper.order_data[person['order_id']]['total_amount']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['order_date']:<15}[/not bold #E6E6E6]"
             )
-    print(f"Total Cancelled Orders: {helper.count_order()[1]}")
+    print(f"[#9A9AEB]Total Cancelled Orders: {helper.count_order()[1]}[/#9A9AEB]")
 
 def pending_orders():
     data = helper.read_data()
-    print("\nList of Pending Orders:")
-    print(f"{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}")
-    print("-" * 50)
+    print("\n[bold italic #9A9AEB]List of Pending Orders:[/bold italic #9A9AEB]")
+    print(f"[bold #CCCCFF]{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}[/bold #CCCCFF]")
+    print("[bold #CCCCFF]-[/bold #CCCCFF]" * 50)
     for person in data:
         if person["status"] == "Pending":
             print(
-                f"{person['order_id']:<10}"
-                f"{person['customer']:<15}"
-                f"₹{helper.order_data[person['order_id']]['total_amount']:<10}"
-                f"{person['order_date']:<15}"
+                f"[not bold #E6E6E6]{person['order_id']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['customer']:<15}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]₹{helper.order_data[person['order_id']]['total_amount']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['order_date']:<15}[/not bold #E6E6E6]"
             )
-    print(f"Total Cancelled Orders: {helper.count_order()[2]}")
+    print(f"[#9A9AEB]Total Cancelled Orders: {helper.count_order()[2]}[/#9A9AEB]")
 
 def orders_by_customers():
     orders_placed = {}
@@ -56,13 +60,13 @@ def orders_by_customers():
             orders_placed[person['customer']] += 1
         else:
             orders_placed[person['customer']] = 1
-    print("\nOrders by Customers:")
-    print(f"{'Customer':<20}{'Orders Placed':<20}")
-    print('-' * 40)
+    print("\n[bold italic #9A9AEB]Orders by Customers:[/bold italic #9A9AEB]")
+    print(f"[bold #CCCCFF]{'Customer':<20} {'Orders Placed':<20}[/bold #CCCCFF]")
+    print('[bold #CCCCFF]-[/bold #CCCCFF]' * 40)
     for i in orders_placed:
         print(
-            f"{i:<20}"
-            f"{orders_placed[i]:<20}"
+            f"[not bold #E6E6E6]{i:<20}[/not bold #E6E6E6]"
+            f"[not bold #E6E6E6]{orders_placed[i]:<20}[/not bold #E6E6E6]"
         )
 
 def orders_by_amount():
@@ -70,32 +74,33 @@ def orders_by_amount():
         amount = int(input("\nEnter amount for filter : "))
     except ValueError:
         print("Please, enter valid number.")
-    print(f"{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}")
-    print("-" * 50)
+    print(f"[bold #CCCCFF]{'ID':<10}{'CUSTOMER':<15}{'Amount':<10}{'DATE':<15}[/bold #CCCCFF]")
+    print("[bold #CCCCFF]-[/bold #CCCCFF]" * 50)
     count = 0
     for person in helper.read_data():
         if helper.order_data[person['order_id']]['total_amount'] >= amount:
             count += 1
             print(
-                f"{person['order_id']:<10}"
-                f"{person['customer']:<15}"
-                f"₹{helper.order_data[person['order_id']]['total_amount']:<10}"
-                f"{person['order_date']:<15}"
+                f"[not bold #E6E6E6]{person['order_id']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['customer']:<15}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]₹{helper.order_data[person['order_id']]['total_amount']:<10}[/not bold #E6E6E6]"
+                f"[not bold #E6E6E6]{person['order_date']:<15}[/not bold #E6E6E6]"
             )
-    print(f"Total {count} customers above ₹{amount}")
+    print(f"[#9A9AEB]Total {count} customers above ₹{amount}[/#9A9AEB]")
 
 def search_menu():
     while(True):
-        print("\n========== Search / Filter Orders ==========")
-        print("1. Completed Orders")
-        print("2. Cancelled Orders")
-        print("3. Pending Orders")
-        print("4. Orders by Customer")
-        print("5. Orders by Amount")
-        print("6. Back")
+        print("\n[bold italic #9A9AEB]========== Search / Filter Orders ==========[/bold italic #9A9AEB]")
+        print("[not bold #E6E6E6]1. Completed Orders[/not bold #E6E6E6]")
+        print("[not bold #E6E6E6]2. Cancelled Orders[/not bold #E6E6E6]")
+        print("[not bold #E6E6E6]3. Pending Orders[/not bold #E6E6E6]")
+        print("[not bold #E6E6E6]4. Orders by Customer[/not bold #E6E6E6]")
+        print("[not bold #E6E6E6]5. Orders by Amount[/not bold #E6E6E6]")
+        print("[not bold #E6E6E6]6. Back[/not bold #E6E6E6]")
         try:
             with helper.Choice() as choice:
                 if choice == 6:
+                    print("[italic #FF5C5C]Moving to main...[italic #FF5C5C]")
                     break
                 match choice:
                     case 1:
@@ -109,9 +114,9 @@ def search_menu():
                     case 5:
                         orders_by_amount()
                     case _:
-                        print("Please, Enter a choice between (1 - 6).")
+                        print("[italic #FF5C5C]Please, Enter a choice between (1 - 6).[/italic #FF5C5C]")
         except ValueError:
-            print("Please, Enter a valid choice.") 
+            print("[italic #FF5C5C]Please, Enter a valid choice.[/italic #FF5C5C]") 
 
 
 

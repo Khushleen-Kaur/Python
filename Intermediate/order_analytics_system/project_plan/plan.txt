@@ -19,7 +19,7 @@ customers - total price - total items - order count ✔
 top 3 customers and their details ✔
 
 4. Data Analysis
-Todays order
+Todays order ✔
 This month order
 order between two dates (YYYY-MM-DD)
 
