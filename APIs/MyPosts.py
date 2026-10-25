@@ -30,6 +30,7 @@ def postPosts():
     response.raise_for_status()
     print("\nPosted successfully!")
     print("Status Code:", response.status_code)
+    print("Response:",response.json())
     
 
 def putPost():
@@ -43,45 +44,49 @@ def putPost():
         'title' : title,
         'body' : body,
     }
-    response = requests.put(f"{url}/{userId}", json=newpost, timeout=10)
+    response = requests.put(f"{url}/{id}", json=newpost, timeout=10)
     response.raise_for_status()
     print("\nPost updated successfully!")
     print("Status Code:", response.status_code)
+    print("Response:",response.json())
 
 def deletePost():
-    userId = int(input("Enter User Id: "))
+    id = int(input("Enter Post Id: "))
 
-    response = requests.put(f"{url}/{userId}", timeout=10)
+    response = requests.delete(f"{url}/{id}", timeout=10)
     response.raise_for_status()
     print("\nPost deleted successfully!")
     print("Status Code:", response.status_code)
+    print("Response:",response.json())
 
 
 def patchTitle():
-    userId = int(input("Enter User ID: "))
+    id = int(input("Enter Post ID: "))
     newTitle = input("Enter new title: ")
     
     response = requests.patch(
-        f"{url}/{userId}", 
+        f"{url}/{id}", 
         json={"title": newTitle},
         timeout=10
     )
     response.raise_for_status()
     print("Status Code:", response.status_code)
     print("Post Updated successfully!")
+    print("Response:",response.json())
 
 def patchBody():
-    userId = int(input("Enter User ID: "))
+    id = int(input("Enter Post ID: "))
     newBody = input("Enter new body: ")
     
     response = requests.patch(
-        f"{url}/{userId}", 
+        f"{url}/{id}", 
         json={"body": newBody},
         timeout=10
     )
     response.raise_for_status()
     print("Status Code:", response.status_code)
     print("Post Updated successfully!")
+    print("Response:",response.json())
 
 
 
@@ -116,10 +121,10 @@ def menu():
                 case _:
                     print("Please, Enter a valid choice..")
 
-        except requests.exceptions.HTTPError as e:
-            print(e)
         except requests.exceptions.Timeout as to:
             print(to)
+        except requests.exceptions.HTTPError as e:
+            print(e)
         except requests.exceptions.RequestException as re:
             print(re)
         except ValueError as ve:
