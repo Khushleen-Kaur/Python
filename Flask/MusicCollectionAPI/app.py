@@ -14,6 +14,13 @@ def get_songs():
 @app.route("/songs", methods=["POST"])
 def post_song():
     response = request.get_json()
+    if "song_name" not in response or "singer_name" not in response:
+        print("Json validation error: one (all) field missing.")
+        return "Json validation error: one (all) field missing.", 400
+    
+    if not response["song_name"] or not response["singer_name"]:
+        print("Data validation error: one (all) field empty.")
+        return "Data validation error: one (all) field empty.", 400
 
     new_song = {
         "song_name": response["song_name"],
@@ -28,7 +35,7 @@ def post_song():
 def update_song(id: int):
     response = request.get_json()
 
-    if(id not in songs.keys()): 
+    if(id not in songs): 
         print("Id does not exists..")
         return
 
@@ -47,7 +54,7 @@ def update_singer_name(id: int):
     
     if("singer_name" in response): 
         songs[id]["singer_name"] = response["singer_name"]
-    if("song_name" in response): 
+    elif("song_name" in response): 
         songs[id]["song_name"] = response["song_name"]
     else: 
         print("Invalid request.. Please give song name or singer name..")
@@ -58,6 +65,7 @@ def update_singer_name(id: int):
 def delete_song(id: int):
     if(id not in songs):
         print("Id dont exist..")
+        return
     songs.pop(id)
     return jsonify(songs) ,200
     
