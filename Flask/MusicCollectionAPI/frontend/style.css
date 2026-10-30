@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{
+    --main-background-color:  rgb(213, 255, 241);
+    --content-box-color: rgb(193, 233, 220);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+h1{
+    justify-self: center;
+    font-weight: 800;
+    margin: 30px;
+}
+body{
+    background-color:var(--main-background-color);
+}
+.card{
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    min-width: 20vw;
+    max-width: 50vw;
+    background-color: var(--main-background-color);
+}
+.content{
+    background-color: var(--content-box-color);
+    border-radius: 20px;
+    width: 80vw;
+    min-height: 60vh;
+    display: flex;
+    justify-self: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.btn-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: #fff;
+    transform: scale(1.01);
+}
+
+/* Dialog Box styling */
+.dialogBox{
+    width: 40vw;
+    height: 60vh;
+    margin: auto;
+    border-radius: 20px;
+}
+.dialogBox div{
+    padding: 30px;
+    padding-top: 10px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+.dialogBox div input{
+    font-size: 1.1rem;
+    padding: 8px;
+}
+.dialogBox button{
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+}
+.dialogBox .dialog-title{
+    margin: 15px;
+    font-size: xx-large;
+    font-weight: 800;
+    display: flex;
+    justify-self: center;
+}

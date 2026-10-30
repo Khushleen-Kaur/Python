@@ -1,10 +1,20 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(
+    app, origin=["http://192.168.29.135:3000"]
+)
 songs = {
-    1: { "song_name": "Perfect", "singer_name": "Ed Sheeran" },
-    2: { "song_name": "Until I Found You", "singer_name": "Stephen Sanchez" }
+    1: { "song_name" : "Perfect" , "singer_name" : "Ed Sheeran" },
+    2: { "song_name" : "Until I Found You" , "singer_name" : "Stephen Sanchez" },
+    3: { "song_name" : "Rabta" , "singer_name" : "Arijit Singh" },
+    4: { "song_name" : "mere rang mein rangne wali" , "singer_name" : "S. P. Balasubrahmanyam" },
+    5: { "song_name" : "Surmayee Ankhiyon Mein" , "singer_name" : "K. J. Yesudas" },
+    6: { "song_name" : "Say You Won't Let Go" , "singer_name" : "James Arthur" },
+    7: { "song_name" : "Kesariya" , "singer_name" : "Arijit Singh" },
+    8: { "song_name" : "Dil Deewana" , "singer_name" : "S. P. Balasubrahmanyam" },
+    9: { "song_name" : "Chura Liya Hai Tumne Jo Dil Ko" , "singer_name" : "Mohammed Rafi" }
 }
 
 @app.route("/songs", methods=["GET"])
