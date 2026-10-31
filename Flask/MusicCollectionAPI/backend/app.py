@@ -24,6 +24,10 @@ def get_songs():
 @app.route("/songs", methods=["POST"])
 def post_song():
     response = request.get_json()
+
+    if not isinstance(response,dict):
+        return "error: Expected a JSON object", 400
+
     if "song_name" not in response or "singer_name" not in response:
         print("Json validation error: one (all) field missing.")
         return "Json validation error: one (all) field missing.", 400
@@ -33,8 +37,8 @@ def post_song():
         return "Data validation error: one (all) field empty.", 400
 
     new_song = {
-        "song_name": response["song_name"],
-        "singer_name": response["singer_name"]
+        "song_name": response["song_name"].strip(),
+        "singer_name": response["singer_name"].strip()
     }
     id = max(songs.keys(),default=0) + 1
     songs[id] = new_song

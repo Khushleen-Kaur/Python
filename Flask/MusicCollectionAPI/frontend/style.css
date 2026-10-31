@@ -24,8 +24,7 @@ body{
     border-radius: 20px;
     margin: 10px;
     padding: 20px;
-    min-width: 20vw;
-    max-width: 50vw;
+    width: 20vw;
     background-color: var(--main-background-color);
 }
 .content{
@@ -55,16 +54,16 @@ body{
 /* Dialog Box styling */
 .dialogBox{
     width: 40vw;
-    height: 60vh;
+    height: 65vh;
     margin: auto;
     border-radius: 20px;
 }
 .dialogBox div{
-    padding: 30px;
+    padding: 50px;
     padding-top: 10px;
     font-size: 1.3rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
 }
 .dialogBox div input{
@@ -84,4 +83,12 @@ body{
     font-weight: 800;
     display: flex;
     justify-self: center;
+}
+.dialogBox .close-btn{
+    padding: 10px;
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-radius: 100%;
 }
