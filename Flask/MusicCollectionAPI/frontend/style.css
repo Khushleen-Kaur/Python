@@ -35,6 +35,7 @@ body{
     padding: 20px;
     width: 20vw;
     background-color: var(--main-background-color);
+    position:relative;
 }
 .content{
     background-color: var(--content-box-color);
@@ -61,6 +62,14 @@ body{
     transform: scale(1.01);
 }
 
+.content .close-btn{
+    padding: 5px;
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-radius: 100%;
+}
 /* Dialog Box styling */
 .dialogBox{
     width: 40vw;
@@ -101,6 +110,31 @@ body{
     right: 20px;
     top: 10px;
     border-radius: 100%;
+}
+.dialogBox .display_patch{
+    display: none;
+}
+h1{
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color:  rgb(213, 255, 241,0.5);
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    /* padding: 10px 0px; */
+    backdrop-filter: blur(5px); 
+}
+footer{
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--text-color);
+    color: var(--content-box-color);
 }
 @media screen and (max-width: 460px) {
     .dialogBox{
