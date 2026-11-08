@@ -13,11 +13,20 @@ async function getSongs(){
 }
 
 const load = document.querySelector("#loadSongs")
+const loading = document.createElement("div")
+loading.classList.add("loading");
 load.addEventListener("click" , async () => {
     load.disabled = true;
     try{
+        content.innerHTML = ""
+        loading.textContent = "Loading songs..."
+        content.append(loading)
         let data = await getSongs();
         let ids = Object.keys(data)
+        if (ids.length == 0){
+            loading.textContent = "List is empty..."
+            return;
+        }
         content.innerHTML = ""
         
         ids.forEach(i => {
@@ -47,6 +56,7 @@ load.addEventListener("click" , async () => {
             content.append(card)
         });
     }catch(e){
+        loading.textContent = "Unable to Load songs! Load again!"
         console.log(e.message);
     }finally{
         load.disabled = false;

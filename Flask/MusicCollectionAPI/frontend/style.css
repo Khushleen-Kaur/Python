@@ -28,6 +28,11 @@ marquee{
 body{
     background-color:var(--main-background-color);
 }
+.loading{
+    margin: 40px;
+    font-size: larger;
+    font-weight: 900;
+}
 .card{
     /* border: 2px solid black; */
     border-radius: 20px;
@@ -46,7 +51,7 @@ body{
     justify-self: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .btn-container{
     display: flex;
@@ -56,9 +61,13 @@ body{
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
+    font-weight: 700;
+    background-color: var(--content-box-color);
+    border-color: var(--text-color);
+    color: var(--text-color);
 }
 .btn:hover{
-    background-color: #fff;
+    background-color: var(--main-background-color);
     transform: scale(1.01);
 }
 
@@ -69,6 +78,10 @@ body{
     right: 20px;
     top: 10px;
     border-radius: 100%;
+    font-weight: 700;
+    background-color: var(--content-box-color);
+    border-color: var(--text-color);
+    color: var(--text-color);
 }
 /* Dialog Box styling */
 .dialogBox{
@@ -76,6 +89,7 @@ body{
     height: 70vh;
     margin: auto;
     border-radius: 20px;
+    background-color: var(--main-background-color);
 }
 .dialogBox div{
     padding: 30px;
@@ -88,6 +102,7 @@ body{
 .dialogBox div input{
     font-size: 1.1rem;
     padding: 8px;
+    background-color: var(--main-background-color);
 }
 .dialogBox button{
     font-size: large;
@@ -110,6 +125,10 @@ body{
     right: 20px;
     top: 10px;
     border-radius: 100%;
+    font-weight: 700;
+    background-color: var(--content-box-color);
+    border-color: var(--text-color);
+    color: var(--text-color);
 }
 .dialogBox .display_patch{
     display: none;
@@ -132,8 +151,12 @@ footer{
     bottom: 0;
     padding: 5px 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--text-color);
+    
+}
+footer div{
+    margin: 0px 20px;
     color: var(--content-box-color);
 }
 @media screen and (max-width: 460px) {
